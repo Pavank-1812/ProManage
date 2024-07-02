@@ -12,7 +12,11 @@ const taskSchema = new Schema({
   priority: { type: String, required: true },
   checklist: [checklistItemSchema],
   dueDate: { type: Date },
-  refUserId: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+  refUserId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  assignTo: {
+    type: String,  // Assuming this will be an email ID
+    required: false  // Optional field
+}
 }, { timestamps: true });
 
 const Task = mongoose.model('Task', taskSchema);

@@ -4,7 +4,7 @@ const moment = require('moment');
 
 const createTask = async (req, res) => {
     try {
-        const { title, priority, checklist, dueDate, userId } = req.body;
+        const { title, priority, checklist, dueDate, userId, assignTo } = req.body;
 
         if (!title || !priority || !checklist) {
             return res.status(400).json({
@@ -18,7 +18,8 @@ const createTask = async (req, res) => {
             section: 'todo',
             priority,
             checklist,
-            refUserId: userId
+            refUserId: userId,
+            assignTo
         };
 
         if (dueDate) {
@@ -111,7 +112,7 @@ const deleteTaskById = async (req, res) => {
 const updateTaskById = async (req, res) => {
     try {
         const taskId = req.params.taskId;
-        const { title, priority, checklist, dueDate, section, itemId, itemChecked } = req.body;
+        const { title, priority, checklist, dueDate, section, itemId, itemChecked, assignTo } = req.body;
 
         const task = await Task.findById(taskId);
         if (!task) {
@@ -139,6 +140,7 @@ const updateTaskById = async (req, res) => {
         if (priority) task.priority = priority;
         if (checklist) task.checklist = checklist;
         if (dueDate) task.dueDate = dueDate;
+        if (assignTo) task.assignTo = assignTo;
 
         const updatedTask = await task.save();
         res.status(200).json({ message: 'Task Updated!', task: updatedTask });
