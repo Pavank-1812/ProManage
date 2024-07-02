@@ -6,7 +6,7 @@ const cors = require('cors');
 const connectDB = require('./Config/db');
 const port = process.env.PORT || 5000;
 const userRoutes = require("./Routes/userRoutes");
-// const taskRoutes = require('./Routes/taskRoutes');
+const taskRoutes = require('./Routes/taskRoutes');
 
 app.use(express.json());
 app.use(cors());
@@ -24,7 +24,7 @@ app.get("/health", (req, res)=>{
 })
 
 app.use('/auth', userRoutes);
-// app.use('/task', taskRoutes);
+app.use('/tasks', taskRoutes);
 
 app.listen(port, (err)=>{
     if(!err){

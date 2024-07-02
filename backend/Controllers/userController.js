@@ -86,6 +86,37 @@ const login = async (req, res) => {
     }
 };
 
+const logout = async (req, res) => {
+    try {
+        // Assuming the token is sent in the request header
+        const token = req.header('Authorization').replace('Bearer ', '');
+
+        if (!token) {
+            return res.status(400).json({
+                message: "Token not provided!",
+                success: false
+            });
+        }
+
+        // Here you would ideally invalidate the token
+        // For example, you might use a token blacklist
+        // or simply inform the client to delete the token
+
+        // Respond with a successful logout message
+        res.status(200).json({
+            message: "User logged out successfully!",
+            success: true
+        });
+
+    } catch (err) {
+        console.log("Error: ", err);
+        res.status(500).json({
+            message: "Server error",
+            errorMessage: err.message
+        });
+    }
+};
+
 const updateUser = async (req, res) => {
   try {
     const { name, email, oldPassword, newPassword } = req.body;
@@ -145,4 +176,4 @@ const updateUser = async (req, res) => {
 }
 };
 
-module.exports = { register, login, updateUser };
+module.exports = { register, login, logout, updateUser };

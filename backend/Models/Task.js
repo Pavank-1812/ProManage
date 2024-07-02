@@ -1,35 +1,20 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const taskSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true
-    },
-    priority: {
-        type: String,
-    },
-    checklist: [{
-        name: { type: String, required: true },
-        checked: { type: Boolean, default: false }
-    }],
-    dueDate: {
-        type: Date,
-        default: null
-    },
-    section: {
-        type: String,
-        enum: ['todo', 'backlog', 'inprogress', 'done'],
-        required: true
-    },
-    refUserId: {
-        type: mongoose.Types.ObjectId,
-        required: true
-    },
-}, {
-    timestamps: {
-        createdAt: 'createdAt',
-        updatedAt: 'updatedAt'
-    }
+const checklistItemSchema = new Schema({
+  task: { type: String, required: true },
+  completed: { type: Boolean, default: false }
 });
 
-module.exports = mongoose.model('task', taskSchema);
+const taskSchema = new Schema({
+  title: { type: String, required: true },
+  section: { type: String, default: 'todo' },
+  priority: { type: String, required: true },
+  checklist: [checklistItemSchema],
+  dueDate: { type: Date },
+  refUserId: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+}, { timestamps: true });
+
+const Task = mongoose.model('Task', taskSchema);
+
+module.exports = Task;
