@@ -1,0 +1,144 @@
+.home_container {
+  width: 85vw;
+  height: 100vh;
+  overflow-x: auto;
+}
+
+.topBar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2vw;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.home_header {
+  width: 100%;
+  height: 10vh;
+  padding-inline: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+  font-size: 3.5vh;
+  font-weight: 500;
+}
+
+.home_selectContainer{
+  display: flex;
+  align-items: center;
+}
+
+.home_select{
+  font-family: Poppins;
+  outline: none;
+  border: none;
+}
+
+.home_menu {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  height: 80vh;
+  padding: 2vh 2vw;
+  column-gap: 2vw;
+
+}
+
+.home_menu::-webkit-scrollbar {
+  height: 2vh;
+}
+
+.home_menu::-webkit-scrollbar-track {
+  background: white;
+}
+
+.home_menu::-webkit-scrollbar-thumb {
+  background: #9CB7C5;
+  border: 3px solid white;
+  border-radius: 1rem;
+}
+
+.home_menu::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+
+.board {
+  flex: 0 0 auto;
+  background-color: #EEF2F5;
+  width: 27%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.boardHeader {
+  height: 10%;
+  width: 100%;
+  padding-inline: 1.5vw;
+  font-family: Poppins;
+  font-size: 2vh;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.collapseIcon {
+  height: 1.8vh;
+  cursor: pointer;
+}
+
+.addIcon {
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.todoTopbar {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasksContainer {
+  height: 90%;
+  width: 100%;
+  padding: 1vh 1vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tasksContainer::-webkit-scrollbar {
+  width: 1vw;
+}
+
+.tasksContainer::-webkit-scrollbar-track {
+  background: #EEF2F5;
+}
+
+.tasksContainer::-webkit-scrollbar-thumb {
+  background: #9CB7C5;
+  border: 3px solid #EEF2F5;
+  border-radius: 1rem;
+}
+
+.tasksContainer::-webkit-scrollbar-button {
+  display: none;
+}
+
+.customToastContainer{
+  width: 5vw;
+  height: 5vh;
+  background-color: green;
+  color: black;
+  border: 2px solid red;
+  text-align: center;
+}

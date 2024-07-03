@@ -1,0 +1,46 @@
+.analytics_container {
+  width: 85vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Open Sans;
+}
+
+.analytics_header {
+  height: 10vh;
+  width: 100%;
+  padding-inline: 2vw;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.analytics_box {
+  height: 90vh;
+  width: 100%;
+  padding: 2vh 2vw;
+  display: flex;
+  column-gap: 1vw;
+}
+
+.analytics_taskList {
+  height: 25vh;
+  width: 40%;
+  border-radius: 0.5rem;
+  background-color: #f9fcff;
+  padding: 0 3vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  font-size: large;
+  color: #90c4cc;
+}
+
+.analytics_taskListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: small;
+  color: black;
+}

@@ -1,0 +1,150 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: Poppins;
+}
+
+.topBar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+  padding-inline: 2vw;
+
+  img {
+    height: 2.5vh;
+  }
+}
+
+.detailsContainer {
+  height: 90vh;
+  padding: 10vh 20vw;
+}
+
+.detailsBox {
+  max-height: 100%;
+  border: 2px solid #edf5fe;
+  border-radius: 1rem;
+  padding: 2vh 2vw;
+}
+
+.priorityContainer {
+  height: 3vh;
+  font-size: x-small;
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+
+  span {
+    font-size: larger;
+  }
+}
+
+.titleContainer {
+  height: 7vh;
+  font-size: large;
+}
+
+.checklistContainer {
+  p {
+    font-size: small;
+  }
+}
+
+.checklistItems {
+  margin-top: 1.5vh;
+  margin-right: -2vw;
+  display: flex;
+  flex-direction: column;
+  max-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+  overflow-y: auto;
+}
+
+.checklistItems::-webkit-scrollbar {
+  width: 2vw;
+}
+
+.checklistItems::-webkit-scrollbar-track {
+  background: white;
+}
+
+.checklistItems::-webkit-scrollbar-thumb {
+  background: #9cb7c5;
+  border: 5px solid white;
+  border-radius: 1rem;
+}
+
+.checklistItems::-webkit-scrollbar-button {
+  display: none;
+}
+
+.item {
+  border: 1.5px solid #e2e2e2;
+  border-radius: 0.5rem;
+  min-height: 6vh;
+  display: flex;
+  align-items: center;
+  padding-inline: 1vw;
+  column-gap: 1vw;
+}
+
+.checklistCheckbox {
+  border: none;
+  outline: none;
+}
+
+.checklistName {
+  border: none;
+  outline: none;
+  position: relative;
+  min-height: 5vh;
+  font-family: Inter;
+  width: 100%;
+}
+
+.footerContainer {
+  height: 8vh;
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+  font-size: small;
+
+  div {
+    background-color: #cf3636;
+    color: white;
+    border-radius: 0.5rem;
+    padding-inline: 0.5vw;
+    height: 60%;
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .topBar {
+    column-gap: 3vw;
+    padding-inline: 10vw;
+    font-size: larger;
+  }
+
+  .detailsContainer {
+    padding: 3vh 10vw;
+  }
+
+  .checklistItems {
+    max-height: 50vh;
+  }
+
+  .checklistItems::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .checklistItems::-webkit-scrollbar-thumb {
+    border: 4px solid white;
+  }
+}

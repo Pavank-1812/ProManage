@@ -1,0 +1,22 @@
+.datePickerContainer {
+  position: relative;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dateDisplay {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dateInput {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}

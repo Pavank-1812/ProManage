@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.container {
+  height: 100vh;
+  width: 15vw;
+  font-family: Poppins;
+  border-right: 1px solid #edf5fe;
+}
+
+.navBrand {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+  font-size: 2.5vh;
+  font-weight: 700;
+  column-gap: 1vw;
+  font-family: "Poppins", sans-serif;
+}
+
+.navMenu {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuItem {
+  width: 100%;
+  height: 7vh;
+  color: #707070;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+  font-size: 2vh;
+  font-family: "Poppins", sans-serif;
+  column-gap: 1vw;
+  /* margin: 1.5vh 0; */
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.menuItem:hover {
+  opacity: 1;
+  background-color: #4391ed1a;
+  color: black;
+  height: 7vh;
+}
+#selected {
+  background-color: #4391ed1a;
+  height: 7vh;
+}
+
+.navFooter {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  font-size: 2vh;
+  column-gap: 1vw;
+  color: #cf3636;
+  cursor: pointer;
+}

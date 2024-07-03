@@ -1,0 +1,158 @@
+.taskBox {
+  border-radius: 0.5rem;
+  width: 100%;
+  min-height: 25%;
+  margin-bottom: 2vh;
+  background-color: white;
+  padding: 1vh 1vw;
+  font-family: Poppins;
+}
+
+.priorityBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.5rem;
+
+  img {
+      width: 1vh;
+      aspect-ratio: 1;
+  }
+}
+
+.priorityBox {
+  color: #707070;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5vw;
+}
+
+.titleBar {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5vh;
+
+
+  p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  }
+}
+
+.checklistTopbar {
+  height: 3.5vh;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expandCollapse {
+  height: 90%;
+  aspect-ratio: 1;
+  border-radius: 0.3rem;
+  color: #767575;
+  background-color: #EEECEC;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  img {
+      height: 1.5vh;
+  }
+}
+
+
+.checklistContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+  margin-top: 1vh;
+  font-family: Inter;
+  font-size: 0.7rem;
+}
+
+.checklistItem{
+  border: 1px solid #E2E2E2;
+  border-radius: 0.5rem;
+  height: 5vh;
+  padding-inline: 1vw;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5vw;
+
+  input[type='checkbox']{
+      width: 1vw;
+      aspect-ratio: 1;
+  }
+}
+
+.checkedBox{
+  accent-color: #17A2B8;
+}
+
+
+.checklistFooter {
+  height: 4vh;
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1vh 0;
+}
+
+.dueDateContainer {
+  height: 100%;
+  width: 25%;
+  display: grid;
+  place-items: center;
+}
+
+.dueDateButton {
+  height: 80%;
+  width: 90%;
+  background-color: #DBDBDB;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.sectionContainer {
+  height: 80%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 0.5vw;
+}
+
+.sectionButton {
+  flex: 1;
+  height: 90%;
+  border-radius: 0.5rem;
+  background-color: #EEECEC;
+  color: #767575;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.menuPopUp {
+  font-size: 0.5rem;
+  font-family: Poppins;
+  font-weight: 500;
+
+  .delete {
+      color: #CF3636;
+  }
+}
+
+.displayMenuButton {
+  border: none;
+  background-color: transparent;
+  font-size: 0.7rem;
+  font-weight: lighter;
+  cursor: pointer;
+}
