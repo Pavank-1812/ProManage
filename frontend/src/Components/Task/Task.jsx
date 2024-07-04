@@ -22,7 +22,7 @@ import DeleteTaskModal from "../Modal/DeleteTaskModal";
 import UpdateForm from "../Forms/UpdateForm";
 import { toastStyles } from "../../Utils/toastStyles";
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL || "https://promanage-v5fn.onrender.com";
+const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
 const modalStyles = {
   content: {
     top: "50%",
