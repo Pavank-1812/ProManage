@@ -27,6 +27,14 @@ app.get('/health', (req, res) => {
 app.use('/auth', userRoutes);
 app.use('/task', taskRoutes);
 
+const corsOptions = {
+  origin: 'https://promanage-234k.onrender.com',
+  optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
+
+
 
 app.use(express.static(path.join(__dirname, "..", "frontend", 'build')));
 
