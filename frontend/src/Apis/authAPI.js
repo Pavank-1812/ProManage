@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+const backendUrl = process.env.REACT_APP_BACKEND_URL || 'https://promanage-2ha4.onrender.com';
 
 const token = localStorage.getItem('token');
 
