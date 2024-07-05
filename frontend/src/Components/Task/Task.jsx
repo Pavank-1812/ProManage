@@ -62,7 +62,7 @@ const Task = ({ task, sectionToCollapse }) => {
   };
 
   const handleShare = (taskId) => {
-    const taskDetailsLink = `${backendUrl}/task/taskDetails/${taskId}`;
+    const taskDetailsLink = `${backendUrl}/taskDetails/${taskId}`;
 
     navigator.clipboard
       .writeText(taskDetailsLink)
