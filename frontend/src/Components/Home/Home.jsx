@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import styles from "./Home.module.css";
 import formatTodayDate from "../../Utils/formatDate";
 import collapseIcon from "../../Assets/Icons/collapseIcon.png";
-import addPeople from "../../Assets/Icons/add-people.png";
+// import addPeople from "../../Assets/Icons/add-people.png";
 import TaskForm from "../Forms/TaskForm";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTasks, createNewTask } from "../../Store/Slices/taskSlice";
@@ -58,11 +58,11 @@ const Home = () => {
       </div>
       <div className={styles.home_header}>
         <div>Board</div>
-        <img
+        {/* <img
           src={addPeople}
           alt="add"
           style={{ marginRight: "79%", width: "70px", height: "15px" }}
-        />
+        /> */}
         <label className={styles.home_selectContainer}>
           <select
             name="filter"
